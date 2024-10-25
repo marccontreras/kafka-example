@@ -42,42 +42,41 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 
 -   Inicia Kafka ejecutando:
 
-bash
+```bash
 
-`# En Linux o Mac
+# En Linux o Mac
 
 bin/kafka-server-start.sh config/server.properties
 
 # En Windows
 
-.\bin\windows\kafka-server-start.bat .\config\server.properties`
-
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+```
 3\. Configurar un tema en Kafka
 
 -------------------------------
 
 Para crear el tema que usarás (en este caso `rk_hadoop`), abre otra terminal y ejecuta:
 
-bash
+```bash
 
-`# En Linux o Mac
+# En Linux o Mac
 
 bin/kafka-topics.sh --create --topic rk_hadoop --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
 # En Windows
 
 .\bin\windows\kafka-topics.bat --create --topic rk_hadoop --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1`
-
+```
 4\. Ejecutar el código de Python
 
 --------------------------------
 
 Ahora que Kafka y Zookeeper están ejecutándose, puedes ejecutar el script de Python modificado:
 
-bash
+```bash
 
-`python nombre_del_archivo.py`
-
+python nombre_del_archivo.py
+```
 Asegúrate de que las credenciales de Twitter en el script sean válidas y configúralas adecuadamente. Si todo está bien configurado, el código debería conectarse a Twitter, transmitir los datos a Kafka y mostrarlos en la consola.
 
- `Este formato Markdown es ideal para documentación y facilitará la lectura y ejecución de los`
