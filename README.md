@@ -23,7 +23,7 @@ Kafka necesita Zookeeper para funcionar, así que ambos deben estar instalados.
 
 - Descomprime el archivo descargado en una carpeta de tu elección.
 
-### Paso 3: Inicia Zookeeper
+### Paso 2.3: Inicia Zookeeper
 
 - Abre una terminal y navega a la carpeta de Kafka.
 - Inicia Zookeeper ejecutando el siguiente comando:
@@ -36,7 +36,7 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 ```
 
-### Paso 4: Inicia el servidor Kafka
+### Paso 2.4: Inicia el servidor Kafka
 
 -   Abre una nueva terminal (mantén Zookeeper ejecutándose) y navega a la carpeta de Kafka.
 
@@ -52,9 +52,7 @@ bin/kafka-server-start.sh config/server.properties
 
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 ```
-3\. Configurar un tema en Kafka
-
--------------------------------
+## Paso 3. Configurar un tema en Kafka
 
 Para crear el tema que usarás (en este caso `rk_hadoop`), abre otra terminal y ejecuta:
 
@@ -68,9 +66,7 @@ bin/kafka-topics.sh --create --topic rk_hadoop --bootstrap-server localhost:9092
 
 .\bin\windows\kafka-topics.bat --create --topic rk_hadoop --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1`
 ```
-4\. Ejecutar el código de Python
-
---------------------------------
+## Paso 4. Ejecutar el código de Python
 
 Ahora que Kafka y Zookeeper están ejecutándose, puedes ejecutar el script de Python modificado:
 
