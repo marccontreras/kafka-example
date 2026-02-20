@@ -112,17 +112,16 @@ Windows
 
 ▶ Running the Application
 
-Make sure:
+Once Kafka and Zookeeper are running and the topic `rk_hadoop` has been created, the streaming pipeline can be started.
 
-Kafka is running
+Ensure that:
 
-Zookeeper is running
-
-The topic rk_hadoop exists
-
-Twitter API credentials are correctly configured in the script
-
-Then run:
+- Kafka broker is available at `localhost:9092`
+- Zookeeper is running
+- The topic `rk_hadoop` exists
+- Twitter API credentials are properly configured in the script
+  
+Then start the streaming process:
 ```bash
 python nombre_del_archivo.py
 ```
